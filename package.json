@@ -1,0 +1,23 @@
+{
+  "name": "near-meta-transaction-example",
+  "version": "1.0.0",
+  "description": "Example using NEAR Protocol meta-transaction with Express",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "@near-js/accounts": "latest",
+    "@near-js/keystores-node": "latest",
+    "@near-js/providers": "latest",
+    "@near-js/signers": "latest",
+    "@near-js/transactions": "latest",
+    "bn.js": "latest",
+    "express": "^4.17.1",
+    "near-api-js": "^3.0.2",
+    "nodemon": "^2.0.15",
+    "os": "latest",
+    "path": "^0.12.7"
+  }
+}
