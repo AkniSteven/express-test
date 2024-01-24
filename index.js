@@ -64,9 +64,14 @@ app.post('/test-transfer-delegated', async (req, res) => {
         //     }
         // );
 
-        const delegateAction = actionCreators.functionCall('test_transaction_event', { text: 'test' });
+
         const delegate = await signerAccount.signedDelegate({
-            actions: [delegateAction],
+            actions: [
+                actionCreators.functionCall('test_transaction_event',
+                { text: 'test' },
+                new BN("3000"),
+                new BN("0"))
+            ],
             blockHeightTtl: 60,
             receiverId: senderAccount.accountId,
         });
@@ -74,7 +79,7 @@ app.post('/test-transfer-delegated', async (req, res) => {
         console.log(delegate);
 
         const result = await signerAccount.signAndSendTransaction({
-            actions: [delegate.delegateAction],
+            actions: [delegate],
             receiverId: delegate.delegateAction.receiverId,
         });
 
