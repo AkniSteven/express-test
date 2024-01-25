@@ -1,0 +1,59 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "declaration": true,
+    "emitDecoratorMetadata": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "lib": [
+      "es2021",
+      "esnext.asynciterable",
+      "dom"
+    ],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noImplicitAny": false,
+    "skipLibCheck": true,
+    "outDir": "dist",
+    "paths": {
+      "@app": [
+        "src/app",
+      ],
+      "@constant": [
+        "src/constants",
+      ],
+      "@controller": [
+        "src/controllers",
+      ],
+      "@helper": [
+        "src/helpers",
+      ],
+      "@interface": [
+        "src/interfaces",
+      ],
+      "@rmq": [
+        "src/message-router",
+      ],
+      "@middleware": [
+        "src/middlewares",
+      ],
+      "@service": [
+        "src/services",
+      ],
+      "@model": [
+        "src/models",
+      ],
+      "@saga": [
+        "src/sagas",
+      ]
+    },
+    "sourceMap": true,
+    "target": "es2021"
+  },
+  "ts-node": {
+    "require": ["tsconfig-paths/register"]
+  },
+  "include": [
+    "src/**/*"
+  ]
+}
